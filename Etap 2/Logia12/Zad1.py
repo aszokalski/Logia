@@ -1,0 +1,106 @@
+from turtle import *
+from math import sqrt
+
+def ol(s):
+    st = str(s)
+    a = 720 / (1.5 * (len(st) - 1) + 1)
+    pu()
+    bk(720 / 2)
+    lt(90)
+    bk(a / 2)
+    rt(90)
+    pd()
+    for cyfra in st:
+        c(cyfra, a)
+        pu()
+        fd(1.5 * a)
+        pd()
+    pu()
+    bk((1.5 * a) + 720)
+    pd()
+
+def c(cyfra, a):
+    if cyfra is "9":
+        pu()
+        fd(a / 4)
+        pd()
+        fd(a / 2)
+        lt(90)
+        fd(a)
+        lt(90)
+        fd(a / 2)
+        lt(90)
+        fd(a)
+        lt(90)
+        pu()
+        bk(a / 4)
+        pd()
+        return
+    lt(45)
+    fd(a * sqrt(2))
+    pu()
+    rt(135)
+    fd(a)
+    rt(135)
+    pd()
+    fd(a * sqrt(2))
+    if cyfra is "0": lt(135); pu(); fd(a); lt(90); pd(); return
+    lt(135)
+    fd(a)
+    if cyfra is "1": lt(90); return
+    lt(135)
+    fd(a * sqrt(2))
+    rt(135)
+    fd(a)
+    pu()
+    rt(90)
+    fd(a)
+    rt(180)
+    pd()
+    if cyfra is "2": return
+    pu()
+    fd(a / 2)
+    lt(90)
+    pd()
+    fd(a)
+    bk(a)
+    rt(90)
+    pu()
+    bk(a / 2)
+    pd()
+    if cyfra is "3": return
+    fd(a)
+    if cyfra is "4": bk(a); return
+    bk(a / 2)
+    lt(90)
+    fd(a)
+    lt(90)
+    fd(a / 2)
+    bk(a)
+    fd(a / 2)
+    lt(90)
+    if cyfra is "5": fd(a); rt(90); fd(a / 2); rt(180); return
+    fd(a / 2)
+    rt(90)
+    fd(a / 2)
+    bk(a)
+    fd(a / 2)
+    if cyfra is "6": lt(90); fd(a / 2); rt(90); fd(a / 2); rt(180); return
+    fd(a / 4)
+    rt(90)
+    fd(a / 2)
+    bk(a)
+    fd(a / 2)
+    rt(90)
+    fd(a / 4)
+    if cyfra is "7": rt(90); fd(a / 2); rt(90); fd(a / 2); rt(180); return
+    fd(a / 4)
+    lt(90)
+    fd(a / 2)
+    bk(a)
+    fd(a / 2)
+    lt(90)
+    fd(a / 4)
+    if cyfra is "8": lt(90); fd(a / 2); rt(90); fd(a / 2); rt(180); return
+    
+    
